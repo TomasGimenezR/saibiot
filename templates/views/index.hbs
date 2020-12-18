@@ -1,0 +1,46 @@
+<div class="index_container">
+    <div class="left_container">
+        <button class="buttonIndex" onclick="location.href='/asigna-permisos'">Asignacion de permisos</button></br>
+        <button class="buttonIndex" onclick="location.href='/cargaBase'">Cargado de Datos</button>
+    </div>
+    <div class="right_container">
+    <div style="margin: auto;">
+        <div class="num_habitacion">
+            <h2>
+                Habitacion
+                <span id="dataRoom">--</span>
+            </h2>
+        </div>
+        <div class="subcontainer temphum">
+            <div class="labels">
+                <p>Temperatura:</p>
+                <p>Humedad:</p>
+            </div>
+            <div class="info">
+                <p><span id="dataTemp">--</span></p>
+                <p><span id="dataHum">--</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="subcontainer infohab">
+        <p class="room_state"></p>
+        <div class="subcontainer">
+            <div class="labels">
+                <p>ID:</p>
+                <p>Nombre:</p>
+                <p>Adicional:</p>
+            </div>
+            <div class="info">
+                <p><span id="dataID">--</span></p>
+                <p><span id="dataName">--</span></p>
+                <p><span id="dataAdicional">--</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="containerBotonesIndex">
+    {{#each habitaciones}}
+        <button id="{{_id}}">{{name}}</button>
+    {{/each}}
+</div>

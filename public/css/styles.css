@@ -1,0 +1,178 @@
+.header{
+    background-color: lightgray;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.footer{
+    text-align: center;
+    line-height: 8px;
+}
+
+.cont_logo {
+    text-align: center;
+}
+
+.cont_logo img {
+    max-width: 180px;
+}
+
+.main_body {
+    margin-top: 110px;
+}
+
+.footer{
+    background-color: lightgray;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.titulo {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.subcontainer {
+    background-color: #b3b3b3;
+    display: flex;
+    justify-content: space-around;
+    padding: 24px;
+}
+
+.subcontainer .labels {
+    font-weight: bold;
+}
+
+.subcontainer .info{
+    margin-left: 25px;
+}
+
+.subcontainer.infohab{
+    flex-direction: column;
+    margin: auto;
+}
+
+.buttonIndex {
+    width: 200px;
+    height: 40px;
+}
+
+.index_container {
+    display: flex;
+}
+
+.left_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 50px;
+}
+
+.right_container{
+    display:flex;
+    justify-content: space-around;
+    background-color: #c8c6c7; 
+    margin: 0 200px;  
+    font-size: 25px;  
+    max-width: 1000px;
+    width: 1000px;
+    height: 450px;
+}
+
+.room_state{
+    font-weight: bold; 
+    text-align:center;
+}
+
+.cargaDatosContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #c8c6c7;
+    margin: auto 250px;
+    border-style: dashed;
+}
+
+.cargaDatosContainer form {
+    width: 100%;
+}
+
+.cargaDatosContainer .inner_container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.cargaDatosContainer .inner_container .data_container {
+    text-align: center;
+}
+
+.cargaDatosContainer .inner_container .identificacion {
+    flex-direction: column;
+    display: flex;
+}
+
+.data_container .salas {
+    width: 130px;
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+}
+
+.btns input {
+    margin: 5px;
+}
+
+.cargaDatosContainer .campos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.cargaDatosContainer .campos div{
+    text-align: center;
+}
+
+.cargaDatosContainer .campos .centro{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.containerBotonesIndex{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.containerBotonesIndex button{
+    text-align: center;
+    margin-top: 30px;
+    width: 70px;
+    height: 70px;
+}
+
+.muestraBase {
+    justify-content: center;
+    display: flex;
+    margin-top: 30px;
+}
+
+table{
+    border: 1px solid black;
+    text-align: center;
+}
+
+table th {
+    background-color: #BCBCBC;
+}
+
+table tbody tr:nth-child(odd)
+{
+    background: #DEDEDE;
+}

@@ -1,0 +1,53 @@
+<h2 class="titulo">Cargado de base</h2>
+
+<div class="cargaDatosContainer">
+    <form action="/cargaBase" method="post">
+        <div class="inner_container">
+            <div class="identificacion">
+                <h3>Codigo de Identificacion</h3>
+                <input id="codigo" name="codigo" type="text" required>
+                <label><input id="is_admin" name="admin" type="checkbox">Es Admin</label>
+            </div>
+            <div class="data_container">
+                <h3>Nombre y Apellido</h3>
+                <input id="name" name="name" type="text" required>
+            </div>
+            <div class="data_container">
+                <h3>Informacion adicional</h3>
+                <input id="adicional" name="adicional" type="text">
+            </div>
+        </div>
+        <div class="btns">
+            <input id="agrega_usuario" type="submit" value="Agregar">
+            <input id="modifica_usuario" type="button" value="Modificar">
+            <input id="elimina_usuario" type="button" value="Eliminar">
+        </div>
+    </form>
+</div>
+
+{{#if usuario_creado}}
+    <p style="color: green; text-align: center; font-weight: bold;">Usuario creado con exito!</p>
+{{/if}}
+
+<div class="muestraBase">
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>ID</th>
+            <th>Es Admin</th>
+        </tr>
+        {{#each usuarios}}
+            <tr class="user_row" data-id="{{_id}}">
+                <td>
+                    {{name}}
+                </td>
+                <td>
+                    {{codigo}}
+                </td>
+                <td>
+                    {{#if admin}}SI{{else}}NO{{/if}}
+                </td>
+            </tr>
+        {{/each}}
+    </table>
+</div>

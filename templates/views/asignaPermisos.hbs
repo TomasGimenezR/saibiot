@@ -1,0 +1,76 @@
+<h2 class="titulo">Asignacion de Permisos</h2>
+
+<div class="cargaDatosContainer">
+    <form action="/asigna-permisos" method="post">
+        <div class="inner_container">
+            <div class="data_container">
+                <h3>Codigo de Identificacion</h3>
+                <input type="text" name="code" required>
+            </div>
+            <div class="data_container">
+                <h3>Nombre de sala</h3>
+                <select class="salas" name="room">
+                </select>
+            </div>
+            <div class="data_container">
+                <h3>Llave</h3>
+                <select class="llaves" name="key">
+                </select>
+            </div>
+            {{!-- <div class="data_container">
+                <h3>Nombre y Apellido</h3>
+                <input type="text" name="name" value="{{name}}" disabled>
+            </div>
+            <div class="data_container">
+                <h3>Finalizado de permiso</h3>
+                <input type="text" name="end_time" value="{{hora_fin}}" disabled>
+            </div> --}}
+        </div>
+        <div class="btns">
+            <input type="submit" value="Asignar Permiso">
+        </div>
+    </form>
+</div>
+<div class="btns">
+    <form action="/export-movements" method="POST">
+        <input type="submit" value="Exportar Movimientos">
+    </form>
+    <form action="/export-pir" method="POST">
+        <input type="submit" value="Exportar Movimientos no autorizados">
+    </form>
+</div>
+
+<div class="muestraBase">
+    <table>
+        <tr>
+            <th>X</th>
+            <th>Horario</th>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Llave</th>
+            <th>Habitacion</th>
+        </tr>
+        {{#each datos}}
+            <tr>
+                <td id="eliminaPermiso" data-id="{{id}}" style="font-weight: bold; color:red ">
+                    X
+                </td>
+                <td>
+                    {{starting_time}}
+                </td>
+                <td>
+                    {{usercode}}
+                </td>
+                <td>
+                    {{username}}
+                </td>
+                <td>
+                    {{key}}
+                </td>
+                <td>
+                    {{room}}
+                </td>
+            </tr>
+        {{/each}}
+    </table>
+</div>
